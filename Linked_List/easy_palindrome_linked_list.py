@@ -38,7 +38,7 @@ class Solution:
     '''
     75.27%
     '''
-    def is_palindrome_final(self, head):
+    def is_palindrome(self, head):
         '''
         :type head: ListNode
         :rtype: bool
