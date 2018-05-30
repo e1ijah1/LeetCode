@@ -21,17 +21,25 @@ Insertion Sort List / medium
 输入: -1->5->3->4->0
 输出: -1->0->3->4->5
 '''
+
+
 class ListNode:
+
     def __init__(self, x):
         self.val = x
         self.next = None
 
+
 '''
 188ms
 86.63%
+时间开销 O(n^2), 使用原来的链表进行操作, 空间开销 O(1)
 '''
+
+
 class Solution(object):
-    def insertionSortList(self, head):
+    @classmethod
+    def insertion_sort_list(cls, head):
         """
         :type head: ListNode
         :rtype: ListNode
@@ -67,6 +75,7 @@ class Solution(object):
                 slow = slow.next
                 curr = curr.next
         return head
+
 
 if __name__ == '__main__':
     pass

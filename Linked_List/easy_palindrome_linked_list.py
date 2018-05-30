@@ -35,14 +35,16 @@ class ListNode:
 
 
 class Solution:
-    '''
-    75.27%
-    '''
-    def is_palindrome(self, head):
-        '''
+
+    """
+    75.27% 88 ms
+    """
+    @classmethod
+    def is_palindrome(cls, head):
+        """
         :type head: ListNode
         :rtype: bool
-        '''
+        """
         # 空表和单元素链表都为回文链表
         if not head or not head.next:
             return True
@@ -60,29 +62,28 @@ class Solution:
             middle = middle.next
 
         # 倒序
-        rmiddle = None
+        r_middle = None
         while middle:
             # 暂存原来节点的下一节点对象
             tmp = middle.next
             # 将原来节点下一节点指向倒序链表的首节点
-            middle.next = rmiddle
+            middle.next = r_middle
             # 完成前端插入后更新倒序链表
-            rmiddle = middle
+            r_middle = middle
             # 变量指向正序链表的下一节点
             middle = tmp
 
         # 此时已经改变了链表, 中间节点之后断开
         np = head
-        while np and rmiddle:
+        while np and r_middle:
             # 若前半部分链表与后半部分的倒序链表不同值返回 False
-            if np.val != rmiddle.val:
+            if np.val != r_middle.val:
                 return False
             else:
                 np = np.next
-                rmiddle = rmiddle.next
+                r_middle = r_middle.next
         return True
 
 
 if __name__ == '__main__':
     pass
-

@@ -10,7 +10,8 @@ Input:  [1,2,1,3,2,5]
 Output: [3,5]
 '''
 
-def singleNumber(nums):
+
+def single_number(nums):
     s1, s2 = set([]), set([])
     for num in nums:
         if num in s1:
@@ -21,5 +22,5 @@ def singleNumber(nums):
 
 
 if __name__ == '__main__':
-    l = [1, 2, 1, 3, 2, 5]
-    singleNumber(l)
+    list_ = [1, 2, 1, 3, 2, 5]
+    single_number(list_)

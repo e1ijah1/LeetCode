@@ -15,6 +15,7 @@ __time__ = '18-5-24 下午11:24'
 原因：342 + 465 = 807
 '''
 
+
 class ListNode:
     def __init__(self, x):
         self.value = x
@@ -40,6 +41,7 @@ def num_to_list(num):
         n = n.next
     return root.next
 
+
 def add_two_numbers(l1, l2):
     """
     :type l1: ListNode
@@ -59,6 +61,7 @@ def add_two_numbers(l1, l2):
         carry = carry // 10
         n = n.next
     return root.next
+
 
 if __name__ == '__main__':
     n1 = num_to_list(342)

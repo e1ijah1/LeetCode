@@ -15,26 +15,30 @@ example:
   ["bat"]
 ]
 '''
+
+
 class Solution(object):
-    def groupAnagrams(self, strs):
+    @classmethod
+    def group_anagrams(cls, str_list):
         """
-        :type strs: List[str]
+        :type str_list: List[str]
         :rtype: List[List[str]]
         """
         d = {}
-        for s in strs:
-            d.setdefault(''.join(sorted(s)), []).append(s)
+        for str_ in str_list:
+            d.setdefault(''.join(sorted(str_)), []).append(s)
 
         return list(d.values())
 
+
 if __name__ == '__main__':
     s = Solution()
-    l = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    l1 = ["eat", "tea", "tan", "ate", "nat", "bat"]
     l2 = ["cab", "pug", "pei", "nay", "ron",
           "rae", "ems", "ida", "mes"]
     l3 = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
-    print(s.groupAnagrams(l),
-          s.groupAnagrams(l2),
-          s.groupAnagrams(l3),
+    print(s.group_anagrams(l1),
+          s.group_anagrams(l2),
+          s.group_anagrams(l3),
           sep='\n\n')

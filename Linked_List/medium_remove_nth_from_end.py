@@ -36,7 +36,7 @@ class ListNode:
         return ''
 
 
-def num_to_linkedlist(num):
+def num_to_linked_list(num):
     if not isinstance(num, int):
         raise ValueError
     num = str(num)
@@ -49,11 +49,11 @@ def num_to_linkedlist(num):
 
 
 def remove_nth_from_end(head, n):
-    '''
+    """
     :type head: ListNode
     :type n: int
     :rtype: ListNode
-    '''
+    """
     # 一开始都指向相同的节点
     first = second =p = ListNode(0)
     p.next = head
@@ -74,12 +74,13 @@ def remove_nth_from_end(head, n):
     second.next = second.next.next
     return p.next
 
+
 if __name__ == '__main__':
-    l = num_to_linkedlist(12345)
+    l = num_to_linked_list(12345)
     print(l)
     l1 = remove_nth_from_end(l, 2)
     print(l)
-    l2 = num_to_linkedlist(987654321)
+    l2 = num_to_linked_list(987654321)
     print(l2)
     # 若 n 为 最大长度, 必须接收返回值, 因为原来的 head 已经被删除,
     # 直接 print 会使用原来的 head 对象

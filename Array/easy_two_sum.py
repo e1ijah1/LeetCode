@@ -4,7 +4,6 @@ __author__ = 'f1renze'
 __time__ = '18-5-23 上午11:59'
 
 
-
 '''
 Two Sum
 
@@ -15,8 +14,11 @@ example:
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
 '''
+
+
 class Solution(object):
-    def twoSum(self, nums, target):
+    @classmethod
+    def two_sum(cls, nums, target):
         """
         :type nums: List[int]
         :type target: int
@@ -30,7 +32,7 @@ class Solution(object):
             else:
                 tmp[item] = index
 
+
 if __name__ == '__main__':
-    s = Solution()
-    l = [1, 2, 7, 11, 15]
-    print(s.twoSum(l, 9))
+    list_ = [1, 2, 7, 11, 15]
+    print(Solution.two_sum(list_, 9))

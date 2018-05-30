@@ -26,12 +26,14 @@ Palindrome Number / easy
 你能不将整数转为字符串来解决这个问题吗？
 '''
 
+
 def is_palindrome(x):
-    '''
+    """
     :type x: int
     :rtype: bool
-    '''
+    """
     return str(x)[::-1] == str(x)
+
 
 if __name__ == '__main__':
     pass
