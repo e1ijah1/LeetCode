@@ -95,7 +95,6 @@ def is_palindrome(x):
     while x > reversed_half_num:
         reversed_half_num = reversed_half_num * 10 + x % 10
         x //= 10
-    #
     return (x == reversed_half_num) or (x == reversed_half_num//10)
 
 
