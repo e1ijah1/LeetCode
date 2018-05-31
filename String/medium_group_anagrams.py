@@ -21,8 +21,8 @@ class Solution(object):
     @classmethod
     def group_anagrams(cls, str_list):
         """
-        :type str_list: List[str]
-        :rtype: List[List[str]]
+        :type str_list: Linear_Table[str]
+        :rtype: Linear_Table[Linear_Table[str]]
         """
         d = {}
         for str_ in str_list:

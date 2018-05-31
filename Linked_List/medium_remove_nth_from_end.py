@@ -3,7 +3,7 @@
 __author__ = 'f1renze'
 __time__ = '18-5-27 上午3:08'
 
-# Remove Nth Node From End of List / medium
+# Remove Nth Node From End of Linear_Table / medium
 '''
 给定一个链表, 删除链表的倒数第 n 个节点, 并且返回
 链表的头结点.

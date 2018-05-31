@@ -4,7 +4,7 @@ __author__ = 'f1renze'
 __time__ = '18-5-29 下午1:36'
 
 '''
-Insertion Sort List / medium
+Insertion Sort Linear_Table / medium
 
 对链表进行插入排序
 

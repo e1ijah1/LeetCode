@@ -4,7 +4,7 @@ __author__ = 'f1renze'
 __time__ = '18-5-28 下午11:08'
 
 '''
-Palindrome Linked List / Easy
+Palindrome Linked Linear_Table / Easy
 
 请判断一个链表是否为回文链表。
 

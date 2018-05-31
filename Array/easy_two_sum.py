@@ -20,9 +20,9 @@ class Solution(object):
     @classmethod
     def two_sum(cls, nums, target):
         """
-        :type nums: List[int]
+        :type nums: Linear_Table[int]
         :type target: int
-        :rtype: List[int]
+        :rtype: Linear_Table[int]
         """
         tmp = {}
         for index, item in enumerate(nums):
