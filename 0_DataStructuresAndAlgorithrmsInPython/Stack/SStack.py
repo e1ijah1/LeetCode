@@ -42,9 +42,13 @@ class SStack:
         return self._elem.pop()
 
 
-if __name__ == '__main__':
+def run():
     st1 = SStack()
     st1.push(3)
     st1.push(5)
     while not st1.is_empty():
         print(st1.pop())
+
+
+if __name__ == '__main__':
+    pass
