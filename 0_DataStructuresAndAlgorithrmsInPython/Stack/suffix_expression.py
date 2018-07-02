@@ -21,7 +21,7 @@ p142 5.3.2 表达式的表示, 计算和变换
 同一个算术表达式的三种等价表示形式:
 中缀形式: (3 - 5) * (6 + 17 * 4) / 3
 前缀形式: / * - 3 5 + 6 * 17 4 3
-后缀形式: 3 5 - 6 17 4 * + * 3 /1
+后缀形式: 3 5 - 6 17 4 * + * 3 / 1
 
 后缀表达式计算:
 - 遇到运算对象时, 记录备用
@@ -84,10 +84,15 @@ def suf_exp_evaluator(exp):
 
 
 def suffix_exp_evaluator(line_):
+    # 默认表达式中的项和运算符之间都有空格, split() 除去空格返回一个 list
     return suf_exp_evaluator(line_.split())
 
 
 def suffix_exp_calculator():
+    """
+    定义了一个交互式的驱动函数, 输入 end 结束
+    :return: None
+    """
     while True:
         try:
             line = input('Suffix Expression: ')
