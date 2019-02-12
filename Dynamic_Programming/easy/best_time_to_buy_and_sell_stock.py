@@ -26,6 +26,7 @@ __time__ = '2019-01-25 01:45'
 
 
 def solution(prices):
+    # float 最大值, int 最大值 sys.maxsize
     max_profit, min_price = 0, float('inf')
     for price in prices:
         min_price = min(min_price, price)
