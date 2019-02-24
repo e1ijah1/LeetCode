@@ -42,6 +42,23 @@ def num_to_list(num):
     return root.next
 
 
+def add_two_numbers_math(l1, l2):
+    h = p = ListNode(0)
+    add = 0
+    while l1 or l2:
+        x = l1.val if l1 else 0
+        y = l2.val if l2 else 0
+        r = add + x + y
+        add = r // 10
+        p.next = ListNode(r % 10)
+        p = p.next
+        l1 = l1.next if l1 else None
+        l2 = l2.next if l2 else None
+    if add > 0:
+        p.next = ListNode(add)
+    return h.next
+
+
 def add_two_numbers(l1, l2):
     """
     :type l1: ListNode
