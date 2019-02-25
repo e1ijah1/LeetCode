@@ -56,3 +56,19 @@ def num_decodings(s):
         else:
             memo[i] = memo[i + 1]
     return memo[0]
+
+
+def num_decoding_dp(s):
+    if not s:
+        return 0
+    fa, n = 1, len(s)
+    sl = 0 if s[n - 1] == '0' else 1
+    for i in range(n - 2, -1, -1):
+        if s[i] == '0':
+            fa, sl = sl, 0
+        else:
+            if s[i:i + 2] <= '26':
+                fa, sl = sl, fa + sl
+            else:
+                fa = sl
+    return sl
