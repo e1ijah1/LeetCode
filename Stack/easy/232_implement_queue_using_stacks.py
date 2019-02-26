@@ -9,12 +9,26 @@ class StackQueue:
         self.size = 0
         self.head = 0
 
-    def push(self, x:int) -> None:
+    def resize(self, n):
+        old = self.data
+        self.data = [None] * n
+        walk = self.head
+        for k in range(self.size):
+
+
+    def push(self, x: int) -> None:
         """
 
         :param x:
         :return:
         """
+        if self.empty():
+            raise RuntimeError('Queue is empty!')
+        location = (self.head + self.size) % len(self.data)
+        self.data[location] = x
+        self.size += 1
+        if self.size >= len(self.data):
+            self.resize(len(self.data) * 2)
 
     def pop(self) -> int:
         """
