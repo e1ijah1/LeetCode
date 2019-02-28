@@ -204,7 +204,7 @@ class Position:
     序列中位置的抽象
     """
 
-    def __init__(self, container, node):
+    def __init__(self, container, node: Node):
         self.container = container
         self.node = node
 
@@ -291,6 +291,31 @@ class PositionList(DoublyLinkedBase):
         old_value = original.element
         original.element = e
         return old_value
+
+
+def insertion_sort(l: PositionList):
+    """
+    按从大到小排序, maker 之前的序列会排好序, pivot 在 maker 之后且 walk 会为其找到合适的位置
+    :param l:
+    :return:
+    """
+    if not l:
+        return None
+    elif len(l) < 1:
+        return l.first()
+
+    maker = l.first()
+    while maker != l.last():
+        pivot = l.after(maker)
+        value = pivot.element()
+        if value > maker.element():
+            maker = pivot
+        else:
+            walk = maker
+            while walk != l.first() and l.before(walk).element() > value:
+                walk = l.before(walk)
+            l.delete(pivot)
+            l.add_before(walk, value)
 
 
 if __name__ == '__name__':
