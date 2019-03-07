@@ -79,6 +79,22 @@ class Tree(ABC):
         else:
             return 1 + self.depth(self.parent(p))
 
+    def _height(self, p):
+        """
+        计算以 p 节点为根的子树的高度, O(n), 若使用 depth 对每个子节点从下往上计算深度, 含有大量重复计算, 最坏情况 O(n^2)
+        :param p:
+        :return:
+        """
+        if self.is_leaf(p):
+            return 0
+        else:
+            return 1 + max(self.height(c) for c in self.children(p))
+
+    def height(self, p=None):
+        if not p:
+            p = self.root()
+        return self._height(p)
+
 
 if __name__ == '__main__':
     Position().element()
