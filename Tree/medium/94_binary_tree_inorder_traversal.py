@@ -5,6 +5,17 @@
 """
 
 
+class TreeNode:
+    """
+    每个节点都链接自己的左右子
+    """
+
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+
 def inorder_traversal(root):
     r, stack = list(), list()
     cur = root
@@ -18,5 +29,5 @@ def inorder_traversal(root):
             cur = stack.pop()
             r.append(cur.val)
             # 到达最小叶节点时下个指针依然为 None
-            cur = cur.left
+            cur = cur.right
     return r
