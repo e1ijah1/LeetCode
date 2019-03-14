@@ -9,13 +9,19 @@ github 查看具体目录时在 repo url 后加 tree
 具体文件则加 blob
 """
 
+preface = '''# LeetCode
+My leetcode and solution by python
+'''
+
 
 def main():
     repo = Repo('./')
     branch = repo.active_branch.name
     # 移除结尾 .git
     remote_url = repo.remotes[0].url[:-4]
-    with open('README2.md', 'w+', encoding='utf-8') as file:
+    with open('README.md', 'w', encoding='utf-8') as file:
+        file.write(preface + '\n')
+
         for _queue in list_files('.'):
             grand = None
             parent = None
