@@ -5,12 +5,13 @@ from git import Repo
 
 
 """
+自动生成带超链接 Markdown 
 github 查看具体目录时在 repo url 后加 tree
 具体文件则加 blob
 """
 
 preface = '''# LeetCode
-My leetcode and solution by python
+Solved Problems by python, total count: {}
 '''
 
 
@@ -20,9 +21,10 @@ def main():
     # 移除结尾 .git
     remote_url = repo.remotes[0].url[:-4]
     with open('README.md', 'w', encoding='utf-8') as file:
-        file.write(preface + '\n')
+        total, count = list_files('.')
+        file.write(preface.format(count) + '\n')
 
-        for _queue in list_files('.'):
+        for _queue in total:
             grand = None
             parent = None
             for e in _queue:
@@ -44,7 +46,7 @@ def list_files(startpath):
     excludes = [
         '0Data', '.git', '.idea', 'venv'
     ]
-    total = list()
+    total, count = list(), 0
 
     for root, dirs, files in os.walk(startpath):
         level = root.replace(startpath, '').count(os.sep)
@@ -61,10 +63,11 @@ def list_files(startpath):
             if not f.endswith('.py'):
                 continue
             total[-1].append(f)
+            count += 1
             print('{}{}'.format(subindent, f))
     # 按文件夹字母序排名
     total = sorted(total, key=lambda x: x[0][0])
-    return total
+    return total, count
 
 
 if __name__ == '__main__':

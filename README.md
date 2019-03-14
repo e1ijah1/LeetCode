@@ -1,5 +1,5 @@
 # LeetCode
-My leetcode and solution by python
+Solved Problems by python, total count: 51
 
 
 ## Array
