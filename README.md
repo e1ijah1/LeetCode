@@ -1,5 +1,5 @@
 # LeetCode
-Solved Problems by python, total count: 51
+Solved Problems by python, total count: 55
 
 
 ## Array
@@ -50,6 +50,16 @@ Solved Problems by python, total count: 51
 
 ### medium
 - [monotone_increasing_digits](https://github.com/F1renze/LeetCode/blob/master/Greedy/medium/monotone_increasing_digits.py)
+
+
+## Heap
+
+### easy
+- [703_kth_largest_element_in_a_stream](https://github.com/F1renze/LeetCode/blob/master/Heap/easy/703_kth_largest_element_in_a_stream.py)
+
+
+### medium
+- [973_k_closest_points_to_origin](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/973_k_closest_points_to_origin.py)
 
 
 ## LinkedList
@@ -145,7 +155,11 @@ Solved Problems by python, total count: 51
 
 
 ### medium
+- [701_insert_into_a_binary_search_tree](https://github.com/F1renze/LeetCode/blob/master/Tree/medium/701_insert_into_a_binary_search_tree.py)
+
 - [98_validate_binary_search_tree](https://github.com/F1renze/LeetCode/blob/master/Tree/medium/98_validate_binary_search_tree.py)
+
+- [450_delete_node_in_a_bst](https://github.com/F1renze/LeetCode/blob/master/Tree/medium/450_delete_node_in_a_bst.py)
 
 - [94_binary_tree_inorder_traversal](https://github.com/F1renze/LeetCode/blob/master/Tree/medium/94_binary_tree_inorder_traversal.py)
 

@@ -1,4 +1,7 @@
 
+import heapq
+
+
 class KthLargest:
 
     def __init__(self, k, nums):
@@ -28,7 +31,7 @@ class KthLargest:
         # 将栈顶元素与最底层的最右交换后删除
         self.swap(0, len(self.data) - 1)
         result = self.data.pop()
-        # 删除后向下冒泡4
+        # 删除后向下冒泡
         self.down_heap(0)
         return result
 
@@ -73,6 +76,52 @@ class KthLargest:
 # Your KthLargest object will be instantiated and called as such:
 # obj = KthLargest(k, nums)
 # param_1 = obj.add(val)
+
+
+class KthLargest:
+    """
+    https://github.com/python/cpython/blob/3.7/Lib/heapq.py
+
+    使用内置结构 heapq, 其提供对基于堆的优先级队列的支持,
+    heappushpop(L, e) O(log n) 但较分别调用 push & pop 效率高
+    heapreplace(L, e) O(log n) 较分别调用 pop & push 效率高
+    nlargest(k, iter) O(n + k log n) k 为 iter 长度
+    nsmallest(k, iter) O(n + k log n) k 为 iter 长度
+    heapify(L) 使用自底向上的堆构造算法, 时间复杂度 O(n)
+
+    def parent(y):
+        return (y-1) // 2
+
+    def heapify(x):
+        # 自底向顶构建堆
+        start = parent(len(x) -1)
+        for i in range(start, -1, -1):
+            # 由 list 尾部的 parent 位置递减序依次下堆
+            down_heap(i)
+    """
+
+    def __init__(self, k, nums):
+        """
+        :type k: int
+        :type nums: List[int]
+        """
+        self.k = k
+        # shallow copy
+        self.heap = nums[:]
+        heapq.heapify(self.heap)
+        while len(self.heap) > self.k:
+            heapq.heappop(self.heap)
+
+    def add(self, val):
+        """
+        :type val: int
+        :rtype: int
+        """
+        if len(self.heap) < self.k:
+            heapq.heappush(self.heap, val)
+        elif self.heap[0] < val:
+            heapq.heapreplace(self.heap, val)
+        return self.heap[0]
 
 
 def t(k, arr, tc):
