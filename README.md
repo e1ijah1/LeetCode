@@ -1,5 +1,5 @@
 # LeetCode
-Solved Problems by python, total count: 55
+Solved Problems by python, total count: 60
 
 
 ## Array
@@ -52,6 +52,10 @@ Solved Problems by python, total count: 55
 - [monotone_increasing_digits](https://github.com/F1renze/LeetCode/blob/master/Greedy/medium/monotone_increasing_digits.py)
 
 
+## HashTable
+- [711_jewels&stones](https://github.com/F1renze/LeetCode/blob/master/HashTable/HashTable/711_jewels&stones.cpp)
+
+
 ## Heap
 
 ### easy
@@ -60,6 +64,14 @@ Solved Problems by python, total count: 55
 
 ### medium
 - [973_k_closest_points_to_origin](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/973_k_closest_points_to_origin.py)
+
+- [215_kth_largest_element_in_an_array](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/215_kth_largest_element_in_an_array.py)
+
+- [378_kth_smallest_element_in_a_sorted_matrix](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/378_kth_smallest_element_in_a_sorted_matrix.py)
+
+- [347_top_k_frequent_elements](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/347_top_k_frequent_elements.py)
+
+- [451_sort_characters_by_frequency](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/451_sort_characters_by_frequency.py)
 
 
 ## LinkedList

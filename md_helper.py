@@ -60,7 +60,7 @@ def list_files(startpath):
         print('{}{}/'.format(indent, root))
         subindent = ' ' * 4 * (level + 1)
         for f in files:
-            if not f.endswith('.py'):
+            if not (f.endswith('.py') or f.endswith('.cpp')):
                 continue
             total[-1].append(f)
             count += 1
