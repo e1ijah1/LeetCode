@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2018-12-24 01:01
-__author__ = 'f1renze'
-__time__ = '2018-12-24 01:01'
+__author__ = "f1renze"
+__time__ = "2018-12-24 01:01"
 
 
-'''
+"""
 ADT BinTree:                            # 一个二叉树抽象数据类型
         BinTree(self, data, left, right)    # 构造
         is_empty(self)
@@ -16,7 +16,7 @@ ADT BinTree:                            # 一个二叉树抽象数据类型
         set_right(self, btree)
         traversal(self)                     # 遍历各个节点
         forall(self, op)                    # 对每个节点执行 op 
-'''
+"""
 
 
 class ListBinTree:
@@ -68,21 +68,23 @@ class ListBinTree:
             self.__list[2] = right
 
 
-'''
-'''
+"""
+"""
 
 
 class BinTreeNode:
     """
     基于链接(引用)实现的二叉树
     """
+
     def __init__(self, _data, _left=None, _right=None):
         self.data = _data
         self.left = _left
         self.right = _right
-        
+
+
 # TODO print tree shape
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

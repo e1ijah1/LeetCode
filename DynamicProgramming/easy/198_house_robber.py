@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-17 12:29
-__author__ = 'f1renze'
-__time__ = '2019-02-17 12:29'
+__author__ = "f1renze"
+__time__ = "2019-02-17 12:29"
 
 from functools import lru_cache
 
@@ -64,7 +64,7 @@ def rob_recursion(nums, i):
     """
     if i < 0:
         return 0
-    return max(rob_recursion(nums, i-2) + nums[i], rob_recursion(nums, i-1))
+    return max(rob_recursion(nums, i - 2) + nums[i], rob_recursion(nums, i - 1))
 
 
 memo = None
@@ -74,7 +74,7 @@ def rob_rm(nums):
     # Recursive + memo (top-down).
     global memo
     memo = [-1 for _ in range(len(nums))]
-    return rob_memo(nums, len(nums)-1)
+    return rob_memo(nums, len(nums) - 1)
 
 
 def rob_memo(nums, i):
@@ -82,7 +82,7 @@ def rob_memo(nums, i):
         return 0
     if memo[i] >= 0:
         return memo[i]
-    memo[i] = max(rob_recursion(nums, i-2) + nums[i], rob_recursion(nums, i-1))
+    memo[i] = max(rob_recursion(nums, i - 2) + nums[i], rob_recursion(nums, i - 1))
     return memo[i]
 
 
@@ -101,7 +101,7 @@ def rob_memo_dp(nums):
     tmp[0] = nums[0]
     tmp[1] = max(nums[0], nums[1])
     for i in range(2, len(nums)):
-        tmp[i] = max(nums[i] + tmp[i-2], tmp[i-1])
+        tmp[i] = max(nums[i] + tmp[i - 2], tmp[i - 1])
     return tmp[-1]
 
 
@@ -117,9 +117,7 @@ def rob_dp(nums):
     return prev1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t1 = [2, 7, 9, 3, 1]
     t2 = [2, 1, 1, 2]
-    print(
-        rob_r(t1), rob_r(t2), rob_rm(t2), rob_memo_dp(t2), rob_dp(t2)
-    )
+    print(rob_r(t1), rob_r(t2), rob_rm(t2), rob_memo_dp(t2), rob_dp(t2))

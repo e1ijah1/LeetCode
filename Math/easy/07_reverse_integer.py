@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-12 23:05
-__author__ = 'f1renze'
-__time__ = '2019-02-12 23:05'
+__author__ = "f1renze"
+__time__ = "2019-02-12 23:05"
 
 """
 Given a 32-bit signed integer, reverse digits of an integer.
@@ -43,10 +43,8 @@ def reverse(x):
 
 def is_int32(n):
     # check if a num is a 32 bit integer
-    return abs(n) <= 2**32-1
+    return abs(n) <= 2 ** 32 - 1
 
 
-if __name__ == '__main__':
-    print(
-        reverse(1563847412)
-    )
+if __name__ == "__main__":
+    print(reverse(1563847412))

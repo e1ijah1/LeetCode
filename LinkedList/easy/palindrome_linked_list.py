@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-5-28 下午11:08
-__author__ = 'f1renze'
-__time__ = '18-5-28 下午11:08'
+__author__ = "f1renze"
+__time__ = "18-5-28 下午11:08"
 
-'''
+"""
 Palindrome Linked Linear_Table / Easy
 
 请判断一个链表是否为回文链表。
@@ -18,7 +18,7 @@ Palindrome Linked Linear_Table / Easy
     
 进阶：
 你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？
-'''
+"""
 
 
 class ListNode:
@@ -29,9 +29,9 @@ class ListNode:
     def __str__(self):
         p = self
         while p:
-            print(p.val, end=' ')
+            print(p.val, end=" ")
             p = p.next
-        return ''
+        return ""
 
 
 class Solution:
@@ -39,6 +39,7 @@ class Solution:
     """
     75.27% 88 ms
     """
+
     @classmethod
     def is_palindrome(cls, head):
         """
@@ -85,5 +86,5 @@ class Solution:
         return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

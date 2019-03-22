@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-5-23 下午12:01
-__author__ = 'f1renze'
-__time__ = '18-5-23 下午12:01'
+__author__ = "f1renze"
+__time__ = "18-5-23 下午12:01"
 
-'''
+"""
 Group Anagrams medium
 
 example:
@@ -14,7 +14,7 @@ example:
   ["nat","tan"],
   ["bat"]
 ]
-'''
+"""
 
 
 class Solution(object):
@@ -26,19 +26,15 @@ class Solution(object):
         """
         d = {}
         for str_ in str_list:
-            d.setdefault(''.join(sorted(str_)), []).append(s)
+            d.setdefault("".join(sorted(str_)), []).append(s)
 
         return list(d.values())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     s = Solution()
     l1 = ["eat", "tea", "tan", "ate", "nat", "bat"]
-    l2 = ["cab", "pug", "pei", "nay", "ron",
-          "rae", "ems", "ida", "mes"]
+    l2 = ["cab", "pug", "pei", "nay", "ron", "rae", "ems", "ida", "mes"]
     l3 = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
-    print(s.group_anagrams(l1),
-          s.group_anagrams(l2),
-          s.group_anagrams(l3),
-          sep='\n\n')
+    print(s.group_anagrams(l1), s.group_anagrams(l2), s.group_anagrams(l3), sep="\n\n")

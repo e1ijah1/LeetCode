@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-5-27 上午3:08
-__author__ = 'f1renze'
-__time__ = '18-5-27 上午3:08'
+__author__ = "f1renze"
+__time__ = "18-5-27 上午3:08"
 
 # Remove Nth Node From End of Linear_Table / medium
-'''
+"""
 给定一个链表, 删除链表的倒数第 n 个节点, 并且返回
 链表的头结点.
 Example
@@ -20,7 +20,7 @@ http://p9410yfgw.bkt.clouddn.com/18-5-26/90517373.jpg
 除了表头指针外还需要维持两个指针状态, 间隔为 n.
 因为倒数第n个节点 + n == None, 若第二个指针为None, 
 则删除第一个指针的下一个节点
-'''
+"""
 
 
 class ListNode:
@@ -31,9 +31,9 @@ class ListNode:
     def __str__(self):
         p = self
         while p:
-            print(p.val, end=' ')
+            print(p.val, end=" ")
             p = p.next
-        return ''
+        return ""
 
 
 def num_to_linked_list(num):
@@ -55,19 +55,19 @@ def remove_nth_from_end(head, n):
     :rtype: ListNode
     """
     # 一开始都指向相同的节点
-    first = second =p = ListNode(0)
+    first = second = p = ListNode(0)
     p.next = head
     # 第一个指针先走 n 步
     # n 总是有效的情况下, 最坏情况是 n 为最后一个节点
     for _ in range(n):
         first = first.next
-    '''
+    """
     若 first 当前为最后一个节点, 
     将 head 之前的 second 指向 head 下一节点(删去节点)
     若 first 在下面的循环中扫描到最后一个节点的前一个节点(first.next == None)
     所以此时等同于 first 为 倒数第一个节点, second 为倒数第 1 + n 个节点
     删去 second 下一个节点即可
-    '''
+    """
     while first and first.next:
         first = first.next
         second = second.next
@@ -75,7 +75,7 @@ def remove_nth_from_end(head, n):
     return p.next
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     l = num_to_linked_list(12345)
     print(l)
     l1 = remove_nth_from_end(l, 2)

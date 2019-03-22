@@ -19,12 +19,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 def find(S, val):
-  """Return index j such that S[j] == val, or -1 if no such element."""
-  n = len(S)
-  j = 0
-  while j < n:
-    if S[j] == val:
-      return j          # a match was found at index j
-    j += 1
-  return -1
+    """Return index j such that S[j] == val, or -1 if no such element."""
+    n = len(S)
+    j = 0
+    while j < n:
+        if S[j] == val:
+            return j  # a match was found at index j
+        j += 1
+    return -1

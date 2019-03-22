@@ -1,5 +1,3 @@
-
-
 """
 后序遍历, 先将右子树遍历并置于结果栈底,
 在回溯遍历左子树
@@ -18,4 +16,3 @@ def postorder_traversal(root):
             p = s.pop()
             p = p.left
     return r
-

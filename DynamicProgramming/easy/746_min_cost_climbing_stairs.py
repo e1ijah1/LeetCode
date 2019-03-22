@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-17 16:27
-__author__ = 'f1renze'
-__time__ = '2019-02-17 16:27'
+__author__ = "f1renze"
+__time__ = "2019-02-17 16:27"
 
 import sys
 
@@ -63,19 +63,11 @@ def solution_dp(cost):
     return min(f1, f2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t1 = [10, 15, 20]
     t2 = [1, 100, 1, 1, 1, 100, 1, 1, 100, 1]
     t3 = [0, 2, 2, 1]
 
-    print(
-        mccs_iter_memo(t1),
-        mccs_iter_memo(t2),
-        mccs_iter_memo(t3)
-    )
+    print(mccs_iter_memo(t1), mccs_iter_memo(t2), mccs_iter_memo(t3))
 
-    print(
-        mccs_dp(t1),
-        mccs_dp(t2),
-        mccs_dp(t3)
-    )
+    print(mccs_dp(t1), mccs_dp(t2), mccs_dp(t3))

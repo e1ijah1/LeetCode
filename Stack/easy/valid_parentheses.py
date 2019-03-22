@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-6-2 下午11:40
-__author__ = 'f1renze'
-__time__ = '18-6-2 下午11:40'
+__author__ = "f1renze"
+__time__ = "18-6-2 下午11:40"
 
-'''
+"""
 Valid Parentheses / Easy
 
 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断字符串是否有效。
@@ -33,7 +33,7 @@ Valid Parentheses / Easy
 示例 5:
 输入: "{[]}"
 输出: true
-'''
+"""
 
 
 def is_valid(s):
@@ -43,7 +43,7 @@ def is_valid(s):
     :return: bool
     """
     stack = []
-    d = {')': '(', ']': '[', '}': '{'}
+    d = {")": "(", "]": "[", "}": "{"}
     for c in s:
         if c in d.values():
             stack.append(c)
@@ -55,5 +55,5 @@ def is_valid(s):
     return stack == []
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

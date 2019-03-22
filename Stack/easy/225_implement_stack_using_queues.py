@@ -1,9 +1,7 @@
-
 from queue import Queue
 
 
 class QueueStack:
-
     def __init__(self):
         """
         Initialize your data structure here.
@@ -40,7 +38,6 @@ class QueueStack:
 
 
 class MyStack:
-
     def __init__(self):
         """
         Initialize your data structure here.
@@ -79,14 +76,9 @@ class MyStack:
         return len(self.a) == 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     q = MyStack()
     q.push(1)
     q.push(2)
     q.push(3)
-    print(
-        q.top(),
-        q.pop(),
-        q.top(),
-        q.pop()
-    )
+    print(q.top(), q.pop(), q.top(), q.pop())

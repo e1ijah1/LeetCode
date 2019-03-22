@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-01-25 01:45
-__author__ = 'f1renze'
-__time__ = '2019-01-25 01:45'
+__author__ = "f1renze"
+__time__ = "2019-01-25 01:45"
 
 
 """
@@ -27,12 +27,12 @@ __time__ = '2019-01-25 01:45'
 
 def solution(prices):
     # float 最大值, int 最大值 sys.maxsize
-    max_profit, min_price = 0, float('inf')
+    max_profit, min_price = 0, float("inf")
     for price in prices:
         min_price = min(min_price, price)
         max_profit = max(max_profit, price - min_price)
     return max_profit
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

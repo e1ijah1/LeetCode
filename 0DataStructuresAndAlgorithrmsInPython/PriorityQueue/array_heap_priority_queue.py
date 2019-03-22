@@ -1,5 +1,3 @@
-
-
 class ArrayHeapPriorityQueue:
     """
     用基于数组表示的堆来实现优先级队列,
@@ -23,7 +21,7 @@ class ArrayHeapPriorityQueue:
 
     @staticmethod
     def parent(j):
-        return (j-1) // 2
+        return (j - 1) // 2
 
     @staticmethod
     def left(j):
@@ -77,13 +75,13 @@ class ArrayHeapPriorityQueue:
 
     def min(self):
         if self.is_empty():
-            raise RuntimeError('Priority Queue is empty')
+            raise RuntimeError("Priority Queue is empty")
         # 返回栈顶的 tuple
         return self.data[0]
 
     def remove_min(self):
         if self.is_empty():
-            raise RuntimeError('Priority Queue is empty')
+            raise RuntimeError("Priority Queue is empty")
         # 将栈顶元素与最底层的最右交换后删除
         self.swap(0, len(self.data) - 1)
         result = self.data.pop()

@@ -1,5 +1,3 @@
-
-
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -23,4 +21,3 @@ def insert(point, val):
             insert(point.left, val)
         else:
             point.left = TreeNode(val)
-

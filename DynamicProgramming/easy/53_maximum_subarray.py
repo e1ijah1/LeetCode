@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-16 18:00
-__author__ = 'f1renze'
-__time__ = '2019-02-16 18:00'
+__author__ = "f1renze"
+__time__ = "2019-02-16 18:00"
 
 """
 Given an integer array nums, find the contiguous subarray 
@@ -70,15 +70,12 @@ def best_dp_max_sub_sequence_sum(nums):
     return max(nums)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t1 = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-    t2 = [-1, ]
+    t2 = [-1]
     t3 = [-2, -1]
     r = max_sub_sequence_sum(t1)
     r2 = max_sub_sequence_sum(t1)
     r3 = best_dp_max_sub_sequence_sum(t2)
 
-    print(
-        r, r2, r3,
-        best_dp_max_sub_sequence_sum(t3)
-    )
+    print(r, r2, r3, best_dp_max_sub_sequence_sum(t3))

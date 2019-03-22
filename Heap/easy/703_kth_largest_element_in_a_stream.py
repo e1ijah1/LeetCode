@@ -1,9 +1,7 @@
-
 import heapq
 
 
 class KthLargest:
-
     def __init__(self, k, nums):
         """
         维护一个节点为 k 的小顶堆, 第 k 个最大值置于堆顶
@@ -27,7 +25,7 @@ class KthLargest:
 
     def remove_min(self):
         if not self.data:
-            raise RuntimeError('Priority Queue is empty')
+            raise RuntimeError("Priority Queue is empty")
         # 将栈顶元素与最底层的最右交换后删除
         self.swap(0, len(self.data) - 1)
         result = self.data.pop()
@@ -37,7 +35,7 @@ class KthLargest:
 
     @staticmethod
     def parent(i):
-        return (i-1) // 2
+        return (i - 1) // 2
 
     @staticmethod
     def left(i):
@@ -138,5 +136,5 @@ def t2():
     t(1, [], [-3, -2, -4, 0, 4])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t1()

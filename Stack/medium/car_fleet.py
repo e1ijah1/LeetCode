@@ -3,7 +3,7 @@
 
 import unittest
 
-''' 853
+""" 853
 N  辆车沿着一条车道驶向位于 target 英里之外的共同目的地。
 
 每辆车 i 以恒定的速度 speed[i] （英里/小时），从初始位置 position[i] （英里） 沿车道驶向目的地。
@@ -31,11 +31,10 @@ N  辆车沿着一条车道驶向位于 target 英里之外的共同目的地。
 从 0 处开始的车无法追上其它车，所以它自己就是一个车队。
 从 5 和 3 开始的车会组成一个车队，它们在 6 处相遇。
 请注意，在到达目的地之前没有其它车会遇到这些车队，所以答案是 3。
-'''
+"""
 
 
 class Solution(object):
-
     @staticmethod
     def car_fleet(target, position, speed):
         """
@@ -67,32 +66,20 @@ class Solution(object):
 
 
 class Tester(unittest.TestCase):
-
     def setUp(self):
         self.solution = Solution()
-        self.target = [
-            12,
-            10
-        ]
-        self.position = [
-            [10, 8, 0, 5, 3],
-            [2, 4]
-        ]
-        self.speed = [
-            [2, 4, 1, 1, 3],
-            [3, 2]
-        ]
+        self.target = [12, 10]
+        self.position = [[10, 8, 0, 5, 3], [2, 4]]
+        self.speed = [[2, 4, 1, 1, 3], [3, 2]]
 
     def test_logic(self):
-        result = self.solution.car_fleet(self.target[0],
-                                         self.position[0],
-                                         self.speed[0])
-        r2 = self.solution.car_fleet(self.target[1],
-                                     self.position[1],
-                                     self.speed[1])
+        result = self.solution.car_fleet(
+            self.target[0], self.position[0], self.speed[0]
+        )
+        r2 = self.solution.car_fleet(self.target[1], self.position[1], self.speed[1])
         self.assertEqual(result, 3)
         self.assertEqual(r2, 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

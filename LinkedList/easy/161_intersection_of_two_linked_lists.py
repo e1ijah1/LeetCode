@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-19 23:24
-__author__ = 'f1renze'
-__time__ = '2019-02-19 23:24'
+__author__ = "f1renze"
+__time__ = "2019-02-19 23:24"
 
 """
 判断2链表是否 Y 形相交
@@ -95,5 +95,5 @@ def get_intersection_node_loop_entrance(headA, headB):
     return None
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

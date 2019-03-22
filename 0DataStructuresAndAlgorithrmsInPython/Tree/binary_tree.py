@@ -1,9 +1,8 @@
-
 from abc import abstractmethod
 
 from .abstract_tree import Tree
 
-'''
+"""
 完全二叉树 / 满二叉树: 每个节点都有0或2个节点
 反之为不完全二叉树
 决策树是完全二叉树
@@ -16,11 +15,10 @@ h <= nI <= 2^h-1
 log(n+1) - 1 <= h <= n - 1
 
 在非空完全二叉树中, nE = nI + 1  
-'''
+"""
 
 
 class BinaryTree(Tree):
-
     @abstractmethod
     def left(self, p):
         """

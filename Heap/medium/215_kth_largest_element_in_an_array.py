@@ -1,4 +1,3 @@
-
 from typing import List
 
 """
@@ -19,4 +18,3 @@ You may assume k is always valid, 1 ≤ k ≤ array's length.
 
 def find_kth_largest(self, nums: List[int], k: int) -> int:
     return sorted(nums)[-k]
-

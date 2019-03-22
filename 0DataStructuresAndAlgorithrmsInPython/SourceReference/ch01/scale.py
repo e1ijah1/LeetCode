@@ -19,6 +19,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 def scale(data, factor):
-  for j in range(len(data)):
-    data[j] *= factor
+    for j in range(len(data)):
+        data[j] *= factor

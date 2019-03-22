@@ -1,10 +1,7 @@
-
-
 from abc import ABC, abstractmethod
 
 
 class Position(ABC):
-
     @abstractmethod
     def element(self):
         pass
@@ -19,7 +16,6 @@ class Position(ABC):
 
 
 class Tree(ABC):
-
     @abstractmethod
     def __len__(self):
         pass
@@ -96,5 +92,5 @@ class Tree(ABC):
         return self._height(p)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     Position().element()

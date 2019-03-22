@@ -1,11 +1,9 @@
-
 import math
 import heapq
 from typing import List
 
 
 class Solution:
-
     def k_closest(self, points: List[List[int]], k: int) -> List[List[int]]:
         # mapper list, some distance may be repeat
         mapper = [[self.eculidean_distance(*i), i] for i in points]
@@ -25,14 +23,12 @@ class Solution:
 class Solution2:
     @staticmethod
     def k_closest(points: List[List[int]], k: int) -> List[List[int]]:
-        return sorted(points, key=lambda x: (x[0]*x[0] + x[1]*x[1]))[:k]
+        return sorted(points, key=lambda x: (x[0] * x[0] + x[1] * x[1]))[:k]
 
 
 def t1():
     return Solution().k_closest([[0, 1], [1, 0]], 2)
 
 
-if __name__ == '__main__':
-    print(
-        t1()
-    )
+if __name__ == "__main__":
+    print(t1())

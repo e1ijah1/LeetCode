@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-01-24 23:33
-__author__ = 'f1renze'
-__time__ = '2019-01-24 23:33'
+__author__ = "f1renze"
+__time__ = "2019-01-24 23:33"
 
 from pprint import pprint
 from collections import namedtuple
@@ -21,7 +21,7 @@ from collections import namedtuple
 
 
 MAX_WEIGHT = 4
-Good = namedtuple('Good', ['price', 'weight'])
+Good = namedtuple("Good", ["price", "weight"])
 # 吉他, 音响, 笔记本电脑
 Store = [Good(1500, 1), Good(3000, 4), Good(2000, 3)]
 
@@ -47,8 +47,10 @@ def bag_01_implementation():
             # 背包容量 > 当前物品重量
             elif bag_weight >= weight:
                 # 剩余重量
-                sur_wei = bag_weight-weight
-                surplus_value = 0 if not (i-1) or not (sur_wei) else cell[i-1][sur_wei]
+                sur_wei = bag_weight - weight
+                surplus_value = (
+                    0 if not (i - 1) or not (sur_wei) else cell[i - 1][sur_wei]
+                )
                 cell[i][j] = max(cell[i - 1][j], price + surplus_value)
             # 装不下
             else:
@@ -58,5 +60,5 @@ def bag_01_implementation():
     pprint(cell)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     bag_01_implementation()

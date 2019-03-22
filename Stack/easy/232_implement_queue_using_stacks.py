@@ -1,5 +1,3 @@
-
-
 class StackQueue:
 
     DEFAULT_CAPACITY = 10
@@ -36,7 +34,7 @@ class StackQueue:
         :return:
         """
         if self.empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         result = self.data[self.head]
         self.data[self.head] = None
         self.head = (self.head + 1) % len(self.data)
@@ -61,7 +59,6 @@ class StackQueue:
 
 
 class MyQueue:
-
     def __init__(self):
         """
         Initialize your data structure here.
@@ -103,15 +100,10 @@ class MyQueue:
         return len(self.a) == 0
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     q = MyQueue()
     q.push(1)
     q.push(2)
     q.push(3)
     q.push(4)
-    print(
-        q.pop(),
-        q.pop(),
-        q.pop(),
-    )
-
+    print(q.pop(), q.pop(), q.pop())

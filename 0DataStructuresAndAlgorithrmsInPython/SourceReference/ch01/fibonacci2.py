@@ -19,8 +19,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 def fibonacci():
-  a, b = 0, 1
-  while True:
-    yield a
-    a, b = b, a+b
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b

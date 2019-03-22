@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-12 22:34
-__author__ = 'f1renze'
-__time__ = '2019-02-12 22:34'
+__author__ = "f1renze"
+__time__ = "2019-02-12 22:34"
 
 
 """
@@ -32,7 +32,7 @@ def solution(strs):
     :return:
     """
     if not strs:
-        return ''
+        return ""
     strs = sorted(strs, key=len)
     r = list()
     tmp = None
@@ -42,10 +42,10 @@ def solution(strs):
             if i == 0:
                 tmp = s[n]
             elif tmp != s[n]:
-                return ''.join(r)
+                return "".join(r)
         r.append(tmp)
-    return ''.join(r)
+    return "".join(r)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

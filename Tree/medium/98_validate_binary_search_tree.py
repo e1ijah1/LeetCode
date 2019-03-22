@@ -1,5 +1,3 @@
-
-
 def is_valid_bst(root):
     stack = list()
     cur, pre = root, None

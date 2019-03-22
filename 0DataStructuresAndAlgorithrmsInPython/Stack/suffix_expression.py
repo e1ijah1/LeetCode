@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-6-4 下午9:39
-__author__ = 'f1renze'
-__time__ = '18-6-4 下午9:39'
+__author__ = "f1renze"
+__time__ = "18-6-4 下午9:39"
 
 import sys
 import os
 
 # 导入同级目录下的模块(sys.path.append), 里面的表达式获取此模块所在的目录
-sys.path.append(os.path.dirname(os.path.abspath('__file__')))
+sys.path.append(os.path.dirname(os.path.abspath("__file__")))
 # 从模块导入类
 from SStack import SStack
 
-'''
+"""
 p142 5.3.2 表达式的表示, 计算和变换
 
 中缀表示形式, 二元运算符写在两个运算对象中间
@@ -27,7 +27,7 @@ p142 5.3.2 表达式的表示, 计算和变换
 - 遇到运算对象时, 记录备用
 - 遇到运算符(或函数名), 应该根据其元数(这里都是二元运算符), 取得前面最近
 遇到的几个运算对象或已完成运算的结果(二元运算符取2个), 应用运算符计算并保存结果.
-'''
+"""
 
 
 class ESStack(SStack):
@@ -45,12 +45,13 @@ class ESStack(SStack):
     因为此种算法不能处理栈中元素不足2个的情况, 所以需要检查栈的深度,
     这里继承顺序表实现的栈数据结构类, 增加检查栈深度的方法
     """
+
     def depth(self):
         return len(self._elem)
 
 
 def suf_exp_evaluator(exp):
-    operators = '+-*/'
+    operators = "+-*/"
     st = ESStack()
     for x in exp:
         # 非操作符入栈, 不能转换为浮点数抛出异常
@@ -60,18 +61,18 @@ def suf_exp_evaluator(exp):
         # 此时 x 非操作符, 若栈深度小于 2 无法操作
         if st.depth() < 2:
             # operand 操作数
-            raise SyntaxError('Short of operand(s).')
+            raise SyntaxError("Short of operand(s).")
         # 取得2个运算对象
         a = st.pop()
         b = st.pop()
         c = None
-        if x == '+':
+        if x == "+":
             c = b + a
-        elif x == '-':
+        elif x == "-":
             c = b - a
-        elif x == '*':
+        elif x == "*":
             c = b * a
-        elif x == '/':
+        elif x == "/":
             # b / 0 时会抛出 ZeroDivisionError: division by zero
             c = b / a
         # 计算结果入栈
@@ -80,7 +81,7 @@ def suf_exp_evaluator(exp):
     if st.depth() == 1:
         return st.pop()
     # 额外的操作数d
-    raise SyntaxError('Extra operand(s).')
+    raise SyntaxError("Extra operand(s).")
 
 
 def suffix_exp_evaluator(line_):
@@ -95,20 +96,20 @@ def suffix_exp_calculator():
     """
     while True:
         try:
-            line = input('Suffix Expression: ')
-            if line == 'end':
+            line = input("Suffix Expression: ")
+            if line == "end":
                 return
             res = suffix_exp_evaluator(line)
             print(res)
         except Exception as e:
-            print('Error:', type(e), e.args)
+            print("Error:", type(e), e.args)
 
 
-if __name__ == '__main__':
-    '''
+if __name__ == "__main__":
+    """
     >>> (3 - 5) * (6 + 17 * 4) / 3
     -49.333333333333336
     输入: 3 5 - 6 17 4 * + * 3 /
     输出: 等同于中缀表示形式
-    '''
+    """
     suffix_exp_calculator()

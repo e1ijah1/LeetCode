@@ -19,11 +19,11 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-age = -1                    # an initially invalid choice
+age = -1  # an initially invalid choice
 while age <= 0:
-  try:
-    age = int(input('Enter your age in years: '))
-    if age <= 0:
-      print('Your age must be positive')
-  except (ValueError, EOFError):
-    print('Invalid response')
+    try:
+        age = int(input("Enter your age in years: "))
+        if age <= 0:
+            print("Your age must be positive")
+    except (ValueError, EOFError):
+        print("Invalid response")

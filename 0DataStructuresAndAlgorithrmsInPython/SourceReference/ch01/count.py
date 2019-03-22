@@ -19,9 +19,10 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 def count(data, target):
-  n = 0
-  for item in data:
-    if item == target:               # found a match
-      n += 1
-  return n
+    n = 0
+    for item in data:
+        if item == target:  # found a match
+            n += 1
+    return n

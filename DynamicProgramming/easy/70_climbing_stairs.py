@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-17 11:02
-__author__ = 'f1renze'
-__time__ = '2019-02-17 11:02'
+__author__ = "f1renze"
+__time__ = "2019-02-17 11:02"
 
 from functools import lru_cache
 
@@ -73,10 +73,10 @@ def climb_stairs_dp(n):
     return b
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(
         climb_stairs_recursion(10),
         climb_stairs_recursion(9),
         climb_stairs_recursion(8),
-        climb_stairs_dp(10)
+        climb_stairs_dp(10),
     )

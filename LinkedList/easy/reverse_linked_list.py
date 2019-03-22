@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-5-31 下午8:59
-__author__ = 'f1renze'
-__time__ = '18-5-31 下午8:59'
+__author__ = "f1renze"
+__time__ = "18-5-31 下午8:59"
 
-'''
+"""
 Reverse Linked List / Easy
 
 反转单链表
@@ -13,7 +13,7 @@ Reverse Linked List / Easy
 
 进阶:
 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
-'''
+"""
 
 
 class ListNode:
@@ -24,7 +24,7 @@ class ListNode:
     def __str__(self):
         p = self
         while p:
-            print(p.elem, end=' ')
+            print(p.elem, end=" ")
             p = p.next
 
 
@@ -60,5 +60,5 @@ def reverse_list_recursive(node, prev=None):
     return reverse_list_recursive(n, node)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

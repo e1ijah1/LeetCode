@@ -19,20 +19,21 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 def binary_search(data, target, low, high):
-  """Return True if target is found in indicated portion of a Python list.
+    """Return True if target is found in indicated portion of a Python list.
 
   The search only considers the portion from data[low] to data[high] inclusive.
   """
-  if low > high:
-    return False                    # interval is empty; no match
-  else:
-    mid = (low + high) // 2
-    if target == data[mid]:         # found a match
-      return True
-    elif target < data[mid]:
-      # recur on the portion left of the middle
-      return binary_search(data, target, low, mid - 1)
+    if low > high:
+        return False  # interval is empty; no match
     else:
-      # recur on the portion right of the middle
-      return binary_search(data, target, mid + 1, high)
+        mid = (low + high) // 2
+        if target == data[mid]:  # found a match
+            return True
+        elif target < data[mid]:
+            # recur on the portion left of the middle
+            return binary_search(data, target, low, mid - 1)
+        else:
+            # recur on the portion right of the middle
+            return binary_search(data, target, mid + 1, high)

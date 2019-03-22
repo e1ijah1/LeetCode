@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-6-3 上午10:28
-__author__ = 'f1renze'
-__time__ = '18-6-3 上午10:28'
+__author__ = "f1renze"
+__time__ = "18-6-3 上午10:28"
 
-'''
+"""
 Min Stack / Easy
 
 设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
@@ -22,7 +22,7 @@ minStack.getMin();   --> 返回 -3.
 minStack.pop();
 minStack.top();      --> 返回 0.
 minStack.getMin();   --> 返回 -2.
-'''
+"""
 
 
 class MinStack:
@@ -72,10 +72,10 @@ class MinStack:
         """
         if not self._elem:
             raise ValueError
-        '''
+        """
         在栈顶元素为最小时删除 _min 的栈顶元素而不考虑栈中有重复元素时
         使用下面的代码
-        '''
+        """
         # if not self._min:
         #     sorted_l = sorted(self._elem)
         #     self._min.append(sorted_l[0])
@@ -90,5 +90,5 @@ class MinStack:
 # param_4 = obj.getMin()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

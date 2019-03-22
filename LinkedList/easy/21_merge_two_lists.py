@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-14 00:58
-__author__ = 'f1renze'
-__time__ = '2019-02-14 00:58'
+__author__ = "f1renze"
+__time__ = "2019-02-14 00:58"
 
 
 class ListNode:
@@ -28,5 +28,5 @@ def mergeTwoLists(l1, l2):
         l2.next = mergeTwoLists(l1, l2.next)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-14 23:03
-__author__ = 'f1renze'
-__time__ = '2019-02-14 23:03'
+__author__ = "f1renze"
+__time__ = "2019-02-14 23:03"
 
 
 """
@@ -38,14 +38,10 @@ def remove_duplicates(nums):
     return i + 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     """
     实际上最后取的是原数组的切片
     """
     n1 = [1, 1, 2]
     n2 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
-    print(
-        n1[:remove_duplicates(n1)],
-        n2[:remove_duplicates(n2)]
-    )
-
+    print(n1[: remove_duplicates(n1)], n2[: remove_duplicates(n2)])

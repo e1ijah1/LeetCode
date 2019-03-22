@@ -1,5 +1,3 @@
-
-
 """
 Given a string, sort it in decreasing order based on the frequency of characters.
 
@@ -46,7 +44,7 @@ def frequency_sort(s):
             continue
         mapper[c] = s.count(c)
 
-    result = ''
+    result = ""
     for i in sorted(list(mapper.items()), key=lambda x: x[1]):
         result = i[0] * i[1] + result
     return result

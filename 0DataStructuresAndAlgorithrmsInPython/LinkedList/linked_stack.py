@@ -1,7 +1,5 @@
-
-
 class Node:
-    __slots__ = 'element', 'next', 'prev'
+    __slots__ = "element", "next", "prev"
 
     def __init__(self, element, _next, prev=None):
         self.element = element
@@ -31,12 +29,12 @@ class LinkedStack:
 
     def top(self):
         if self.is_empty():
-            raise RuntimeError('Stack is empty!')
+            raise RuntimeError("Stack is empty!")
         return self.head.element
 
     def pop(self):
         if self.is_empty():
-            raise RuntimeError('Stack is empty!')
+            raise RuntimeError("Stack is empty!")
         r = self.head.element
         self.head = self.head.next
         self.size -= 1
@@ -61,12 +59,12 @@ class LinkedQueue:
 
     def first(self):
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         return self.head.element
 
     def dequeue(self):
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         r = self.head.element
         self.head = self.head.next
         self.size -= 1
@@ -85,7 +83,6 @@ class LinkedQueue:
 
 
 class CircularQueue:
-
     def __init__(self):
         self.tail = None
         self.size = 0
@@ -98,12 +95,12 @@ class CircularQueue:
 
     def first(self):
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         return self.tail.next
 
     def dequeue(self):
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         old = self.tail.next
         if self.size == 1:
             self.tail = None
@@ -174,12 +171,12 @@ class LinkedDeque(DoublyLinkedBase):
 
     def first(self):
         if self.is_empty():
-            raise RuntimeError('Deque is empty')
+            raise RuntimeError("Deque is empty")
         return self.header.next.element
 
     def last(self):
         if self.is_empty():
-            raise RuntimeError('Deque is empty')
+            raise RuntimeError("Deque is empty")
         return self.trailer.prev.element
 
     def insert_first(self, e):
@@ -190,12 +187,12 @@ class LinkedDeque(DoublyLinkedBase):
 
     def delete_first(self):
         if self.is_empty():
-            raise RuntimeError('Deque is empty')
+            raise RuntimeError("Deque is empty")
         return self.delete_node(self.header.next)
 
     def delete_last(self):
         if self.is_empty():
-            raise RuntimeError('Deque is empty')
+            raise RuntimeError("Deque is empty")
         return self.delete_node(self.trailer.prev)
 
 
@@ -222,6 +219,7 @@ class PositionList(DoublyLinkedBase):
     """
 
     """
+
     def __iter__(self):
         cursor = self.first()
         while cursor is not None:
@@ -230,11 +228,11 @@ class PositionList(DoublyLinkedBase):
 
     def _validate(self, p):
         if not isinstance(p, Position):
-            raise TypeError('p must be proper Position type')
+            raise TypeError("p must be proper Position type")
         if p.container is not self:
-            raise ValueError('p does not belong to this container')
+            raise ValueError("p does not belong to this container")
         if p.node.next is None:
-            raise ValueError('p is no longer valid')
+            raise ValueError("p is no longer valid")
         return p.node
 
     def _make_position(self, node):
@@ -318,5 +316,5 @@ def insertion_sort(l: PositionList):
             l.add_before(walk, value)
 
 
-if __name__ == '__name__':
+if __name__ == "__name__":
     pass

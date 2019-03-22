@@ -1,5 +1,3 @@
-
-
 class ArrayQueue:
     """ 使用首位相连的循环数组模拟队列
     使用 list 实现的 Queue, 实现 FIFO 可以使用 append + pop(0),
@@ -23,7 +21,7 @@ class ArrayQueue:
 
     def first(self):
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         return self._data[self._front]
 
     def dequeue(self):
@@ -32,7 +30,7 @@ class ArrayQueue:
         :return:
         """
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         result = self._data[self._front]
         self._data[self._front] = None
         self._front = (self._front + 1) % len(self._data)
@@ -70,7 +68,6 @@ class ArrayQueue:
 
 
 class ArrayDeque(ArrayQueue):
-
     def __init__(self):
         super().__init__()
 
@@ -90,7 +87,7 @@ class ArrayDeque(ArrayQueue):
 
     def delete_last(self):
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         back = (self._front + self._size - 1) % len(self._data)
         if back > self._size:
             result = self._data[self._front]
@@ -106,7 +103,7 @@ class ArrayDeque(ArrayQueue):
 
     def last(self):
         if self.is_empty():
-            raise RuntimeError('Queue is empty!')
+            raise RuntimeError("Queue is empty!")
         back = (self._front + self._size - 1) % len(self._data)
         if back > self._size:
             return self._data[self._front]

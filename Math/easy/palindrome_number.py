@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-5-29 上午10:22
-__author__ = 'f1renze'
-__time__ = '18-5-29 上午10:22'
+__author__ = "f1renze"
+__time__ = "18-5-29 上午10:22"
 
-'''
+"""
 Palindrome Number / easy
 
 判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
@@ -24,7 +24,7 @@ Palindrome Number / easy
 
 进阶:
 你能不将整数转为字符串来解决这个问题吗？
-'''
+"""
 
 
 def is_palindrome_str(x):
@@ -35,7 +35,7 @@ def is_palindrome_str(x):
     return str(x)[::-1] == str(x)
 
 
-'''
+"""
 >>> n = 123456
 >>> n % 10 # 得到最后一位数字
 6
@@ -79,7 +79,7 @@ def is_palindrome_str(x):
 ... 
 >>> print(n1, rn, rn//10, sep=' ')
 65 1234 123
-'''
+"""
 
 
 def is_palindrome(x):
@@ -95,8 +95,8 @@ def is_palindrome(x):
     while x > reversed_half_num:
         reversed_half_num = reversed_half_num * 10 + x % 10
         x //= 10
-    return (x == reversed_half_num) or (x == reversed_half_num//10)
+    return (x == reversed_half_num) or (x == reversed_half_num // 10)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

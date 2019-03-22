@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-5-31 上午10:23
-__author__ = 'f1renze'
-__time__ = '18-5-31 上午10:23'
+__author__ = "f1renze"
+__time__ = "18-5-31 上午10:23"
 
-'''
+"""
 假设有 n 个人围坐一圈, 现在要求从第 k 个人开始报数,
 报到第 m 个人退出, 从下一个人开始继续报数并按照同样规则退出,
 直至所有人退出, 按顺序输出各列人的编号 
-'''
+"""
 
 
 def josephus_array(n, k, m):
@@ -28,9 +28,9 @@ def josephus_array(n, k, m):
     此算法时间开销较大, 当 m=n 时, 考虑计算到最后表中只剩一个元素的情况,
     内层循环需要遍历整张表 n 遍, 每次只能将 count +1, 效率极低
     """
-    people = list((range(1, n+1)))
-    print('Initial:', people)
-    print('Start:', end=' ')
+    people = list((range(1, n + 1)))
+    print("Initial:", people)
+    print("Start:", end=" ")
     i = k - 1
     # 共出列 n 人故循环 n 次
     for num in range(n):
@@ -42,18 +42,18 @@ def josephus_array(n, k, m):
                 count += 1
             # 计数达到 m, 将元素出列
             if count == m:
-                print(people[i], end='')
+                print(people[i], end="")
                 people[i] = 0
             # 取模: (i+1) 比 n 小得 (i+1), 比 n 大得 (i+1)-n
             # 目的是保持 i 取值范围不超出 n,
             # 通过下标移动, 在数组内循环, 计数达到 m 时退出循环
-            i = (i+1) % n
+            i = (i + 1) % n
         # 逗号分隔
         if num < n - 1:
-            print(', ', end='')
+            print(", ", end="")
         else:
-            print('')
-    print('Final_list:', people)
+            print("")
+    print("Final_list:", people)
     return
 
 
@@ -67,14 +67,14 @@ def josephus_sequence_able(n, k, m):
     :return: None
     函数循环 n 次, 输出语句调用 list.pop() 需要线性时间, 故算法复杂度是 O(n^2)
     """
-    people = list(range(1, n+1))
-    num, i = n, k-1
+    people = list(range(1, n + 1))
+    num, i = n, k - 1
     # 从 n 到 0 倒序循环
     for num in range(n, 0, -1):
         # (i + m-1) 从 i 的位置(初始为 k-1) 开始计数 m 个, % num 不超出当前list的长度
-        i = (i + m-1) % num
+        i = (i + m - 1) % num
         # 打印出列元素
-        print(people.pop(i), end=(', ' if num > 1 else '\n'))
+        print(people.pop(i), end=(", " if num > 1 else "\n"))
     return
 
 
@@ -110,7 +110,7 @@ class LCList:
 
     def pop(self):
         if self._rear is None:
-            raise LinkedListUnderflow('in pop of LCList')
+            raise LinkedListUnderflow("in pop of LCList")
         p = self._rear.next
         if self._rear is p:
             self._rear = None
@@ -123,7 +123,7 @@ class LCList:
             return
         p = self._rear.next
         while True:
-            print(p.elem, end=('\n' if p is self._rear else ', '))
+            print(p.elem, end=("\n" if p is self._rear else ", "))
             if p is self._rear:
                 break
             p = p.next
@@ -135,6 +135,7 @@ class Josephus(LCList):
     建立初始表的复杂度O(n),
     后面的循环算法复杂度O(m*n) [移动m步, 重复n次]
     """
+
     def turn(self, m):
         for i in range(m):
             self._rear = self._rear.next
@@ -143,24 +144,24 @@ class Josephus(LCList):
         super().__init__()
         # 构建值为 1 ~ n 的循环单链表
         for i in range(n):
-            self.append(i+1)
-        print('Initial:', end=' ')
+            self.append(i + 1)
+        print("Initial:", end=" ")
         self.print_all()
         # 将表尾指针指向 k-1 的位置, 初始时表尾指针的下一个节点位置为0
-        print('Start:', end=' ')
-        self.turn(k-1)
+        print("Start:", end=" ")
+        self.turn(k - 1)
         while not self.is_empty():
             # 表尾指针由 k-1 的位置沿next方向移动m次
             # 由于初始时从k开始, 所以往前移动m-1次达到计数
             # 由于链表本身每次删除后表尾指针自动指向下一节点, 所以依然是移动m-1次
-            self.turn(m-1)
-            print(self.pop(), end=('\n' if self.is_empty() else ', '))
+            self.turn(m - 1)
+            print(self.pop(), end=("\n" if self.is_empty() else ", "))
 
 
-if __name__ == '__main__':
-    print('Josephus Based Array'.center(58, '-'))
+if __name__ == "__main__":
+    print("Josephus Based Array".center(58, "-"))
     josephus_array(10, 2, 7)
-    print('Josephus Based Sequence Table'.center(58, '-'))
+    print("Josephus Based Sequence Table".center(58, "-"))
     josephus_sequence_able(10, 2, 7)
-    print('Josephus Based Linked Circle Linear_Table'.center(58, '-'))
+    print("Josephus Based Linked Circle Linear_Table".center(58, "-"))
     Josephus(10, 2, 7)

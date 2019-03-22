@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-21 23:11
-__author__ = 'f1renze'
-__time__ = '2019-02-21 23:11'
+__author__ = "f1renze"
+__time__ = "2019-02-21 23:11"
 
 
 """
@@ -50,5 +50,5 @@ def remove_r(prev, head, val):
     return remove_r(head, head.next, val)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

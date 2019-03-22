@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-7-4 下午1:51
-__author__ = 'f1renze'
-__time__ = '18-7-4 下午1:51'
+__author__ = "f1renze"
+__time__ = "18-7-4 下午1:51"
 
-'''
+"""
 40ms
 
 给定一个经过编码的字符串，返回它解码后的字符串。
@@ -15,7 +15,7 @@ __time__ = '18-7-4 下午1:51'
 s = "3[a]2[bc]", 返回 "aaabcbc".
 s = "3[a2[c]]", 返回 "accaccacc".
 s = "2[abc]3[cd]ef", 返回 "abcabccdcdcdef".
-'''
+"""
 
 
 def decode_string(s):
@@ -25,15 +25,15 @@ def decode_string(s):
     """
     stack = []
     cur_num = 0
-    cur_str = ''
+    cur_str = ""
     for item in s:
-        if item == '[':
+        if item == "[":
             stack.append(cur_num)
             stack.append(cur_str)
             # 入栈归零
             cur_num = 0
-            cur_str = ''
-        elif item == ']':
+            cur_str = ""
+        elif item == "]":
             pre_str = stack.pop()
             num = stack.pop()
             cur_str = pre_str + num * cur_str
@@ -45,7 +45,7 @@ def decode_string(s):
     return cur_str
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     t1 = "3[a]2[bc]"
     t2 = "100[leetcode]"
     print(decode_string(t2))

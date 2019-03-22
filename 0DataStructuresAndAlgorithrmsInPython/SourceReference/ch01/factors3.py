@@ -19,12 +19,13 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-def factors(n):             # generator that computes factors
-  k = 1
-  while k * k < n:          # while k < sqrt(n)
-    if n % k == 0:
-      yield k
-      yield n // k
-    k += 1
-  if k * k == n:            # special case if n is perfect square
-    yield k
+
+def factors(n):  # generator that computes factors
+    k = 1
+    while k * k < n:  # while k < sqrt(n)
+        if n % k == 0:
+            yield k
+            yield n // k
+        k += 1
+    if k * k == n:  # special case if n is perfect square
+        yield k

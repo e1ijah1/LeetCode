@@ -1,5 +1,3 @@
-
-
 class GameEntry:
     """记录游戏条目"""
 
@@ -14,7 +12,7 @@ class GameEntry:
         return self._score
 
     def __str__(self):
-        return f'{self._name}, {self._score}'
+        return f"{self._name}, {self._score}"
 
 
 class Scoreboard:
@@ -30,7 +28,7 @@ class Scoreboard:
         return self._board[item]
 
     def __str__(self):
-        return '\n'.join(str(self._board[j]) for j in range(self._n))
+        return "\n".join(str(self._board[j]) for j in range(self._n))
 
     def add(self, entry):
         """
@@ -47,7 +45,7 @@ class Scoreboard:
 
             j = self._n - 1
             while j > 0 and self._board[j - 1].get_score() < score:
-                self._board[j] = self._board[j-1]
+                self._board[j] = self._board[j - 1]
                 j -= 1
             self._board[j] = entry
 
@@ -60,14 +58,14 @@ def insertion_sort(l):
     """
     for k in range(1, len(l)):
         cur, j = l[k], k
-        while j > 0 and l[j-1] > cur:
-            l[j], l[j-1] = l[j-1], l[j]
+        while j > 0 and l[j - 1] > cur:
+            l[j], l[j - 1] = l[j - 1], l[j]
             j -= 1
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sb = Scoreboard()
-    e = GameEntry('Jack', 100)
+    e = GameEntry("Jack", 100)
     sb.add(e)
-    sb.add(GameEntry('Marry', 200))
+    sb.add(GameEntry("Marry", 200))
     print(sb)

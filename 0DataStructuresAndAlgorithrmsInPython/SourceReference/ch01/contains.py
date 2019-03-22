@@ -19,8 +19,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 def contains(data, target):
-  for item in target:
-    if item == target:               # found a match
-      return True
-  return False
+    for item in target:
+        if item == target:  # found a match
+            return True
+    return False

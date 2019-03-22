@@ -1,5 +1,3 @@
-
-
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -12,7 +10,8 @@ class Solution3:
     使用循环解决
     """
 
-    def is_symmetric(self, root: TreeNode) -> bool:
+    @staticmethod
+    def is_symmetric(root: TreeNode) -> bool:
         if not root:
             return True
         lq, rq = [root.left], [root.right]
@@ -38,6 +37,7 @@ class Solution2:
     """
     递归判断左子树的右子与右子树的左子是否相等
     """
+
     def is_symmetric(self, root: TreeNode) -> bool:
         if not root:
             return True
@@ -53,7 +53,6 @@ class Solution2:
 
 
 class Solution1:
-
     def is_symmetric(self, root: TreeNode) -> bool:
         if not root:
             return True
@@ -90,4 +89,3 @@ class Solution1:
             s.append(p.left)
             s.append(p.right)
         return r
-

@@ -1,23 +1,20 @@
-
 """
 https://leetcode.com/problems/monotone-increasing-digits/
 """
 
 
 class Solution:
-
     @staticmethod
     def get_digit_list(n):
         return list(map(int, str(n)))
 
     @staticmethod
     def convert_dl2int(dl):
-        return int(''.join([str(i) for i in dl]))
+        return int("".join([str(i) for i in dl]))
 
     def check_monotone_increasing_digits(self, n):
         dl = self.get_digit_list(n)
-        return all(map(lambda x: x[0] <= x[1],
-                       zip(dl, dl[1:])))
+        return all(map(lambda x: x[0] <= x[1], zip(dl, dl[1:])))
 
     def find_not_incresing_digit(self, n):
         """
@@ -53,12 +50,12 @@ class Solution:
 
         dl = self.get_digit_list(n)
         num = self.find_not_incresing_digit(n)
-        '''
+        """
         input 855832 
         判断这个数字中第几位开始不递增， 前一位 -1, 后续填9
-        '''
+        """
         for i in range(num, -1, -1):
-            new_dl = dl[:i] + [dl[i]-1] + [9 for i in dl[i+1:]]
+            new_dl = dl[:i] + [dl[i] - 1] + [9 for i in dl[i + 1 :]]
             new = self.convert_dl2int(new_dl)
             if self.check_monotone_increasing_digits(new):
                 return new
@@ -73,9 +70,9 @@ class Solution:
         #         return i
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     obj = Solution()
-    print(obj.find_not_incresing_digit(332), obj.get_num(332)) # 299
+    print(obj.find_not_incresing_digit(332), obj.get_num(332))  # 299
     print(obj.find_not_incresing_digit(866), obj.get_num(866))
     print(obj.find_not_incresing_digit(120))  # 119
     print(obj.monotoneIncreasingDigits(120))

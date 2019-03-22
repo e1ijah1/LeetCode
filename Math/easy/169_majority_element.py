@@ -1,5 +1,3 @@
-
-
 def majority_element_memo(nums: list) -> int:
     d = dict()
 
@@ -22,4 +20,3 @@ def majority_element(nums: list) -> int:
         else:
             c += 1
     return t
-

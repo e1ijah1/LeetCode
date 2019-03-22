@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 18-5-29 下午1:36
-__author__ = 'f1renze'
-__time__ = '18-5-29 下午1:36'
+__author__ = "f1renze"
+__time__ = "18-5-29 下午1:36"
 
-'''
+"""
 Insertion Sort Linear_Table / medium
 
 对链表进行插入排序
@@ -20,21 +20,20 @@ Insertion Sort Linear_Table / medium
 示例 2：
 输入: -1->5->3->4->0
 输出: -1->0->3->4->5
-'''
+"""
 
 
 class ListNode:
-
     def __init__(self, x):
         self.val = x
         self.next = None
 
 
-'''
+"""
 188ms
 86.63%
 时间开销 O(n^2), 使用原来的链表进行操作, 空间开销 O(1)
-'''
+"""
 
 
 class Solution(object):
@@ -77,5 +76,5 @@ class Solution(object):
         return head
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     pass

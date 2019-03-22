@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Created by f1renze on 2019-02-17 12:02
-__author__ = 'f1renze'
-__time__ = '2019-02-17 12:02'
+__author__ = "f1renze"
+__time__ = "2019-02-17 12:02"
 
 """
 The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,
@@ -36,11 +36,9 @@ def fibonacci_num_dp(n):
         return 0
     a, b = 0, 1
     for i in range(1, n):
-        a, b = b, a+b
+        a, b = b, a + b
     return b
 
 
-if __name__ == '__main__':
-    print(
-        fibonacci_num_dp(10)
-    )
+if __name__ == "__main__":
+    print(fibonacci_num_dp(10))

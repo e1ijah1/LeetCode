@@ -19,8 +19,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 def range(start, stop=None, step=1):
-  if stop is None:
-    stop = start
-    start = 0
-  ...
+    if stop is None:
+        stop = start
+        start = 0
+    ...

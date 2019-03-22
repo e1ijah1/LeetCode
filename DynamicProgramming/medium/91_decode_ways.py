@@ -1,4 +1,3 @@
-
 """
 A message containing letters from A-Z is being encoded to numbers using the following mapping:
 
@@ -38,16 +37,16 @@ def num_decodings(s):
 
     # memo[i] 表示字符串中第 i 位数字与其之后数字的组成的编码总数
     memo = [0 for _ in range(len(s))]
-    if s[-1] != '0':
+    if s[-1] != "0":
         memo[-1] = 1
 
-    start = len(s)-2
+    start = len(s) - 2
     for i in range(start, -1, -1):
         # '0' 需要与其前一位一起考虑，不单独考虑
-        if s[i] == '0':
+        if s[i] == "0":
             continue
         # 判断与后面的数字的组合是否小于 26
-        if s[i] == '1' or (s[i] == '2' and s[i+1] <= '6'):
+        if s[i] == "1" or (s[i] == "2" and s[i + 1] <= "6"):
             if i == start:
                 memo[i] = memo[i + 1] + 1
             else:
@@ -62,12 +61,12 @@ def num_decoding_dp(s):
     if not s:
         return 0
     fa, n = 1, len(s)
-    sl = 0 if s[n - 1] == '0' else 1
+    sl = 0 if s[n - 1] == "0" else 1
     for i in range(n - 2, -1, -1):
-        if s[i] == '0':
+        if s[i] == "0":
             fa, sl = sl, 0
         else:
-            if s[i:i + 2] <= '26':
+            if s[i : i + 2] <= "26":
                 fa, sl = sl, fa + sl
             else:
                 fa = sl
