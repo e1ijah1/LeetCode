@@ -1,5 +1,5 @@
-# LeetCode
-Solved Problems by python, total count: 60
+ LeetCode
+Solved Problems by python, total count: 65
 
 
 ## Array
@@ -7,7 +7,13 @@ Solved Problems by python, total count: 60
 ### easy
 - [27_remove_element](https://github.com/F1renze/LeetCode/blob/master/Array/easy/27_remove_element.py)
 
+- [271_contains_duplicate](https://github.com/F1renze/LeetCode/blob/master/Array/easy/271_contains_duplicate.py)
+
+- [217_contains_duplicate](https://github.com/F1renze/LeetCode/blob/master/Array/easy/217_contains_duplicate.go)
+
 - [26_remove_duplicates_from_sorted_array](https://github.com/F1renze/LeetCode/blob/master/Array/easy/26_remove_duplicates_from_sorted_array.py)
+
+- [219_contains_duplicate_II](https://github.com/F1renze/LeetCode/blob/master/Array/easy/219_contains_duplicate_II.py)
 
 
 ### medium
@@ -43,6 +49,8 @@ Solved Problems by python, total count: 60
 
 
 ### medium
+- [5_longest_palindromic_substring](https://github.com/F1renze/LeetCode/blob/master/DynamicProgramming/medium/5_longest_palindromic_substring.py)
+
 - [91_decode_ways](https://github.com/F1renze/LeetCode/blob/master/DynamicProgramming/medium/91_decode_ways.py)
 
 
@@ -53,7 +61,9 @@ Solved Problems by python, total count: 60
 
 
 ## HashTable
-- [711_jewels&stones](https://github.com/F1renze/LeetCode/blob/master/HashTable/HashTable/711_jewels&stones.cpp)
+
+### easy
+- [711_jewels&stones](https://github.com/F1renze/LeetCode/blob/master/HashTable/easy/711_jewels%26stones.cpp)
 
 
 ## Heap
@@ -160,6 +170,8 @@ Solved Problems by python, total count: 60
 - [104_maximum_depth_of_binary_tree](https://github.com/F1renze/LeetCode/blob/master/Tree/easy/104_maximum_depth_of_binary_tree.py)
 
 - [101_symmetric_tree](https://github.com/F1renze/LeetCode/blob/master/Tree/easy/101_symmetric_tree.py)
+
+- [235_lowest_common_ancestor_of_a_binary_search_tree](https://github.com/F1renze/LeetCode/blob/master/Tree/easy/235_lowest_common_ancestor_of_a_binary_search_tree.py)
 
 - [700_search_in_a_binary_search_tree](https://github.com/F1renze/LeetCode/blob/master/Tree/easy/700_search_in_a_binary_search_tree.py)
 

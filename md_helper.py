@@ -1,4 +1,6 @@
+
 import os
+import urllib
 
 from git import Repo
 
@@ -34,6 +36,7 @@ def main():
                     file.write("\n" + prefix + " " + e[0] + "\n")
                     parent = e[0]
                 else:
+                    # e is file name
                     link = (
                         "["
                         + e.split(".")[0]
@@ -48,13 +51,15 @@ def main():
                         + "/"
                         + parent
                         + "/"
-                        + e
+                        + urllib.parse.quote(e)
                         + ")"
                     )
                     file.write("- " + link + "\n\n")
 
 
 def list_files(startpath):
+    enable = [".py", ".cpp", ".go", ".java"]
+
     excludes = ["0Data", ".git", ".idea", "venv"]
     total, count = list(), 0
 
@@ -70,8 +75,9 @@ def list_files(startpath):
         print("{}{}/".format(indent, root))
         subindent = " " * 4 * (level + 1)
         for f in files:
-            if not (f.endswith(".py") or f.endswith(".cpp")):
-                continue
+            for end in enable:
+                if not f.endswith(end):
+                    continue
             total[-1].append(f)
             count += 1
             print("{}{}".format(subindent, f))

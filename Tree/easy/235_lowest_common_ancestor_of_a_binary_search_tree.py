@@ -43,8 +43,8 @@ class Solution:
             return self.lowest_common_ancestor(root.left, p, q)
         elif root.val < min(p.val, q.val):
             return self.lowest_common_ancestor(root.right, p, q)
-        else:
-            return root
+
+        return root
 
 
 class Solution2:
