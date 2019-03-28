@@ -7,7 +7,7 @@ Solved Problems by python, total count: 65
 ### easy
 - [27_remove_element](https://github.com/F1renze/LeetCode/blob/master/Array/easy/27_remove_element.py)
 
-- [271_contains_duplicate](https://github.com/F1renze/LeetCode/blob/master/Array/easy/271_contains_duplicate.py)
+- [217_contains_duplicate](https://github.com/F1renze/LeetCode/blob/master/Array/easy/217_contains_duplicate.py)
 
 - [217_contains_duplicate](https://github.com/F1renze/LeetCode/blob/master/Array/easy/217_contains_duplicate.go)
 
@@ -80,6 +80,8 @@ Solved Problems by python, total count: 65
 - [378_kth_smallest_element_in_a_sorted_matrix](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/378_kth_smallest_element_in_a_sorted_matrix.py)
 
 - [347_top_k_frequent_elements](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/347_top_k_frequent_elements.py)
+
+- [692_top_k_frequent_words](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/692_top_k_frequent_words.py)
 
 - [451_sort_characters_by_frequency](https://github.com/F1renze/LeetCode/blob/master/Heap/medium/451_sort_characters_by_frequency.py)
 

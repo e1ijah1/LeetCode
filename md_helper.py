@@ -61,7 +61,7 @@ def list_files(startpath):
     enable = [".py", ".cpp", ".go", ".java"]
 
     excludes = ["0Data", ".git", ".idea", "venv"]
-    total, count = list(), 0
+    total, counter = list(), set()
 
     for root, dirs, files in os.walk(startpath):
         level = root.replace(startpath, "").count(os.sep)
@@ -79,11 +79,12 @@ def list_files(startpath):
                 if not f.endswith(end):
                     continue
             total[-1].append(f)
-            count += 1
+            # 根据题号计数
+            counter.add(f.split('.')[0])
             print("{}{}".format(subindent, f))
     # 按文件夹字母序排名
     total = sorted(total, key=lambda x: x[0][0])
-    return total, count
+    return total, len(counter)
 
 
 if __name__ == "__main__":
