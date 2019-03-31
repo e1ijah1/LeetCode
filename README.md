@@ -1,5 +1,5 @@
  LeetCode
-Solved Problems by python, total count: 65
+Solved Problems by python, total count: 67
 
 
 ## Array
@@ -8,6 +8,8 @@ Solved Problems by python, total count: 65
 - [27_remove_element](https://github.com/F1renze/LeetCode/blob/master/Array/easy/27_remove_element.py)
 
 - [217_contains_duplicate](https://github.com/F1renze/LeetCode/blob/master/Array/easy/217_contains_duplicate.py)
+
+- [977_squares_of_a_sorted_array](https://github.com/F1renze/LeetCode/blob/master/Array/easy/977_squares_of_a_sorted_array.py)
 
 - [217_contains_duplicate](https://github.com/F1renze/LeetCode/blob/master/Array/easy/217_contains_duplicate.go)
 
@@ -106,6 +108,8 @@ Solved Problems by python, total count: 65
 
 ### medium
 - [rotate_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/rotate_list.py)
+
+- [86_partition_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/86_partition_list.py)
 
 - [remove_nth_from_end](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/remove_nth_from_end.py)
 
