@@ -75,6 +75,21 @@ def remove_nth_from_end(head, n):
     return p.next
 
 
+class Solution2:
+    @staticmethod
+    def remove_nth_from_end(head: ListNode, n: int) -> ListNode:
+        fast = slow = head
+        for _ in range(n):
+            fast = fast.next
+        if not fast:
+            return head.next
+        while fast.next:
+            fast = fast.next
+            slow = slow.next
+        slow.next = slow.next.next
+        return head
+
+
 if __name__ == "__main__":
     l = num_to_linked_list(12345)
     print(l)

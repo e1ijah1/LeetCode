@@ -1,5 +1,5 @@
  LeetCode
-Solved Problems by python, total count: 67
+Solved Problems by python, total count: 68
 
 
 ## Array
@@ -93,25 +93,27 @@ Solved Problems by python, total count: 67
 ### easy
 - [142_linked_list_cycle_II](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/142_linked_list_cycle_II.py)
 
+- [234_palindrome_linked_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/234_palindrome_linked_list.py)
+
 - [141_linked_list_cycle](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/141_linked_list_cycle.py)
 
-- [palindrome_linked_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/palindrome_linked_list.py)
+- [237_delete_node_in_linked_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/237_delete_node_in_linked_list.py)
 
 - [161_intersection_of_two_linked_lists](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/161_intersection_of_two_linked_lists.py)
 
 - [21_merge_two_lists](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/21_merge_two_lists.py)
 
-- [reverse_linked_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/reverse_linked_list.py)
+- [206_reverse_linked_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/206_reverse_linked_list.py)
 
 - [203_remove_linked_list_elements](https://github.com/F1renze/LeetCode/blob/master/LinkedList/easy/203_remove_linked_list_elements.py)
 
 
 ### medium
+- [19_remove_nth_from_end_of_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/19_remove_nth_from_end_of_list.py)
+
 - [rotate_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/rotate_list.py)
 
 - [86_partition_list](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/86_partition_list.py)
-
-- [remove_nth_from_end](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/remove_nth_from_end.py)
 
 - [2_add_two_numbers](https://github.com/F1renze/LeetCode/blob/master/LinkedList/medium/2_add_two_numbers.py)
 

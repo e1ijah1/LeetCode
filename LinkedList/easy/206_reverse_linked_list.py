@@ -35,14 +35,13 @@ def reverse_list_iterative(head):
     :param head: 表头指针
     :return: 反转后的表头指针
     """
-    reverse = None
+    prev = None
     while head:
         tmp = head.next
-        head.next = reverse
-        reverse = head
+        head.next = prev
+        prev = head
         head = tmp
-    head = reverse
-    return head
+    return prev
 
 
 def reverse_list_recursive(node, prev=None):

@@ -34,6 +34,22 @@ class ListNode:
         return ""
 
 
+class Solution2:
+    @staticmethod
+    def is_palindrome(head: ListNode) -> bool:
+        s = list()
+
+        while head:
+            s.append(head.val)
+            head = head.next
+
+        while len(s) > 1:
+            if s.pop(0) != s.pop():
+                return False
+
+        return True
+
+
 class Solution:
 
     """
